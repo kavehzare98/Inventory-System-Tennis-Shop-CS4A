@@ -142,7 +142,7 @@ public class InventoryManager {
 			}
 
 		} else {
-			System.out.println("Error: Item not found!")
+			System.out.println("Error: Item not found!");
 		}
 	}
 	
