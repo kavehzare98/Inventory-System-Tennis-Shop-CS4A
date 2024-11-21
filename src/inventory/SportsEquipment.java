@@ -1,7 +1,5 @@
 package inventory;
 
-import inventory.InventoryItem;
-
 public class SportsEquipment extends InventoryItem {
     // Private attributes
     private String sportName;
