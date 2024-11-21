@@ -50,7 +50,7 @@ public class InventoryManager {
 	// 			    The method returns a boolean as follows:
 	// 			    	true - successfully removed item from the items List.
 	// 			    	false - unsuccessful operation. Item not found.
-	public bool removeItem(int itemID) {
+	public boolean removeItem(int itemID) {
 		
 		int found = findItem(itemID);
 
