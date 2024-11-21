@@ -5,8 +5,10 @@ import manager.InventoryManager;
 
 public class Main {
 	public static void main(String[] args) {
-		System.out.println("Hello World!");
-		InventoryItem item(
+		// Add a tennis racquet to invnetory using overloaded constructor
+		SportsEquipment tennisRacquet = new SportsEquipment(101, "Wilson", 
+		// Add tennis shorts to inventory using setters and getters
+		// Call every inventory manager function
 	}
 
 }
