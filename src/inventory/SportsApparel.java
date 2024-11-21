@@ -2,8 +2,7 @@ package inventory;
 
 import inventory.InventoryItem;
 
-class SportsApparel
-{
+public class SportsApparel extends InventoryItem{
     private String apparelCategory;
     private String size;
     private String color;

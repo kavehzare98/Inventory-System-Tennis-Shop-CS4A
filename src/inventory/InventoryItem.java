@@ -15,7 +15,7 @@ public abstract class InventoryItem {
 
     // Construct an item object with null values
     protected InventoryItem(){
-        itemID = "00";
+        itemID = 100;
         brandName = "null";
         stockQuantity = 0;
         price = 0f;
@@ -24,7 +24,7 @@ public abstract class InventoryItem {
         description = "null";
     }
 
-    protected InventoryItem(String itemID, String brandName, int stockQuantity, float price,
+    protected InventoryItem(int itemID, String brandName, int stockQuantity, float price,
                             float purchaseCost, String sport, String description){
         this.itemID = itemID;
         this.brandName = brandName;
@@ -40,7 +40,7 @@ public abstract class InventoryItem {
         return itemID;
     }
 
-    public void setItemID(String itemID) {
+    public void setItemID(int itemID) {
         this.itemID = itemID;
     }
 

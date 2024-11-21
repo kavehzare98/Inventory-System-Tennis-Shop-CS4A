@@ -5,18 +5,23 @@ public class SportsEquipment extends InventoryItem {
     private String sportName;
     private String equipmentCategory;
     private String model;
-    private String[] size;
+    private String size;
     private float weightInGrams;
 
     // Default constructor
     public SportsEquipment() {
         super(); // Call parent's default constructor
+        sportName = "SPORT NAME";
+        equipmentCateogry = "CATEGORY";
+        model = "MODEL";
+        size = "SIZE";
+        weightInGrams = 0.00;
     }
 
     // Parameterized constructor
     public SportsEquipment(String itemID, String name, float price, int stockQuantity,
                            String sportName, String equipmentCategory, 
-                           String model, String[] size, float weightInGrams) {
+                           String model, String size, float weightInGrams) {
         // Added full parent constructor call with all required parameters
         super(itemID, name, price, stockQuantity);
         
@@ -60,7 +65,7 @@ public class SportsEquipment extends InventoryItem {
         return size != null ? size.clone() : null;
     }
 
-    public void setSize(String[] size) {
+    public void setSize(String size) {
         // Deep copy of input array
         this.size = size != null ? size.clone() : null;
     }
