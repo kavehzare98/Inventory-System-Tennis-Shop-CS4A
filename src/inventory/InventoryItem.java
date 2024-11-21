@@ -2,6 +2,8 @@
 * Kelly Dempster : Project 2 InventoryItem Class
 * */
 
+package inventory;
+
 public abstract class InventoryItem {
     private String itemID;
     private String brandName;
