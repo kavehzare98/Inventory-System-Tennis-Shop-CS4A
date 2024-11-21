@@ -5,7 +5,7 @@
 package inventory;
 
 public abstract class InventoryItem {
-    private String itemID;
+    private int itemID;
     private String brandName;
     private int stockQuantity;
     private float price;
