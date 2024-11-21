@@ -43,5 +43,18 @@ public class SportsApparel extends InventoryItem{
         this.color = color;
     };
 
+    // PLEASE FIX THESE, had to add these in just to compile.
+    @Override
+    public void getInfo() {
+        System.out.println("getInfo() function for SportsApparel");
+    }
+
+    @Override
+    public float calculateRestockCost(int quantity) {
+        // Just to test
+        System.out.println("calculateRestockCost() function called by SportsApparel");
+        return 0.00;    // change this line
+    }
+
 
 }

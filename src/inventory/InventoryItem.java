@@ -36,7 +36,7 @@ public abstract class InventoryItem {
     }
 
     /* Getters and Setters for class members...lines 33 to 88 */
-    public String getItemID() {
+    public int getItemID() {
         return itemID;
     }
 

@@ -12,7 +12,7 @@ public class Main {
 		// Create i.m. and add items to list
 		InventoryManager inventoryManager = new InventoryManager();
 		inventoryManager.addItem(tennisRacquet);
-		inventoryManager.addItem(tennisShorts);
+		//inventoryManager.addItem(tennisShorts);
 
 		// Call every i.m. function
 		System.out.println("All inventory items: ");
