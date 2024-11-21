@@ -99,20 +99,101 @@ public class InventoryManager {
 			return found;
 		}
 	}
-	// restockItem(int itemID)
-	
+	// restockItem(int itemID, int quantity)
+	public void restockItem(int itemID, int quantity) {
+		int found = findItem(itemID);
+
+		if (found != -1) {
+			InventoryItem item = items[found];
+			int current_stock = item.getStockQuantity();
+			int final_stock;
+			final_stock = current_stock + quantity;
+			item.setStockQuantity(final_stock);
+		}
+		else {
+			System.out.println("Error: Item not found!");
+		}
+	}
+
 	// printItemIDs()
+	public void printItemIDs() {
+		System.out.println("\n  itemID  |  brandName  |  price  ");
+		for (int i = 0; i < items.size(); i++) {
+			System.out.println(item[i].getItemID() + " | " + item[i].getBrandName() + " | " + item[i].getPrice());
+		}	
+		System.out.println("");
+	}
 	
 	// sellItem(itemID, quantity)
+	public void sellItem(int itemID, int quantity) {
+		int found = findItem(itemID);
+
+		if (found != -1) {
+			InventoryItem item = items[found];
+			int current_stock = item.getStockQuantity();
+
+			if (quantity > current_stock){
+				System.out.println("Insufficient stock. New Selling quantity: " + current_stock);
+				item.setStockQuantity(0);	// Sell all remaining stock
+			} else {
+				System.out.println("Sufficient stock. Selling desired quantity: " + quantity);
+				int final_stock = current_stock - quantity;
+				item.setStockQuantity(final_stock);
+			}
+
+		} else {
+			System.out.println("Error: Item not found!")
+		}
+	}
 	
 	// displayAllItems()
-	
+	public void displayAllItems() {
+		System.out.println("Displaying All Items in current Inventory System:");
+		for (int i = 0; i < items.size(); i++)
+			items[i].getInfo();
+	}
+
 	// calculateRevenue(itemID, quantity)
+	public float calculateRevenue(int itemID, int quantity) {
+		int found = findItem(itemID);
+
+		if (found != -1) {
+			float itemPrice = items[found].getPrice();
+			float totalRevenue = itemPrice * quantity;
+			return totalRevenue;
+		} else {
+			return (float)found;
+		}
+	}
 	
 	// calculateCost(itemID, quantity)
-	
+	public float calculateCost(int itemID, int quantity) {
+		int found = findItem(itemID);
+
+		if (found != -1) {
+			float itemCost = items[found].getPurchaseCost();
+			float totalCost = itemCost * quantity;
+			return totalCost;
+		} else {
+			return (float)found;
+		}
+	}	
+
 	// calculateGrossProfit(itemID, quantity)
-	
+	public float calculateProfit(int itemID, int quantity) {
+		int found = findItem(itemID);
+
+		if (found != -1) {
+			float totalRevenue = calculateRevenue(itemID, quantity);
+			float totalCost = calculateCost(itemID, quantity);
+			float totalProfit = totalRevenue - totalCost;
+			return totalProfit;
+		} else {
+			return (float)found;
+		}
+	}
+
+	// toString() method
 	public String toString() {
 		
 		StringBuilder sb = new StringBuilder();
@@ -123,19 +204,6 @@ public class InventoryManager {
 
 		return sb;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
