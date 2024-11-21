@@ -10,7 +10,7 @@ public class Main {
 		// Add tennis shorts to inventory using setters and getters
 		// Call every inventory manager function
 		// Create i.m. and add items to list
-		InventoryMangager inventoryManager = new InventoryManager();
+		InventoryManager inventoryManager = new InventoryManager();
 		inventoryManager.addItem(tennisRacquet);
 		inventoryManager.addItem(tennisShorts);
 
