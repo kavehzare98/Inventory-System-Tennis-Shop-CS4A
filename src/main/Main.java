@@ -9,6 +9,17 @@ public class Main {
 		SportsEquipment tennisRacquet = new SportsEquipment(101, "Wilson", 
 		// Add tennis shorts to inventory using setters and getters
 		// Call every inventory manager function
+		// Create i.m. and add items to list
+		InventoryMangager inventoryManager = new InventoryManager();
+		inventoryManager.addItem(tennisRacquet);
+		inventoryManager.addItem(tennisShorts);
+
+		// Call every i.m. function
+		System.out.println("All inventory items: ");
+		inventoryManager.displayAllItems();
+			
+		}
+
 	}
 
 }
