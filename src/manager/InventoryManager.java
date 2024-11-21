@@ -83,7 +83,37 @@ public class InventoryManager {
 		}
 	}
 
+	// checkStock(int itemID)
+	public int checkStock(int itemID) {
+		
+		int found = findItem(itemID);
 
+		if (found != -1) {
+			InventoryItem item = items[found];
+			
+			int stockQuantity = item.getStockQuantity();
+	
+			return stockQuantity;
+		}
+		else {
+			return found;
+		}
+	}
+	// restockItem(int itemID)
+	
+	// printItemIDs()
+	
+	// sellItem(itemID, quantity)
+	
+	// displayAllItems()
+	
+	// calculateRevenue(itemID, quantity)
+	
+	// calculateCost(itemID, quantity)
+	
+	// calculateGrossProfit(itemID, quantity)
+
+	
 
 
 
