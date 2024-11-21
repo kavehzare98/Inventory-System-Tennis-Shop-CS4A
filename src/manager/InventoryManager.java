@@ -112,8 +112,28 @@ public class InventoryManager {
 	// calculateCost(itemID, quantity)
 	
 	// calculateGrossProfit(itemID, quantity)
-
 	
+	public String toString() {
+		
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("There are ").append(items.size()).append(" items in the inventory system.\n")
+			.append("itemID ").append("brandName ").append("stockQuantity ").append("price ")
+			.append("purchaseCost ").append("sport ").append("description\n");
+
+		return sb;
+	}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
