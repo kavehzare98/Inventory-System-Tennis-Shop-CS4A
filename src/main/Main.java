@@ -6,7 +6,7 @@ import manager.InventoryManager;
 public class Main {
 	public static void main(String[] args) {
 		// Add a tennis racquet to invnetory using overloaded constructor
-		SportsEquipment tennisRacquet = new SportsEquipment(101, "Wilson", 100, 249.00, 130.00, "Tennis", "Used by Tsitsipas", "Racquets", "Blade V8", "98,16x19,4 3/8", 305);
+		SportsEquipment tennisRacquet = new SportsEquipment(101, "Wilson", 249.00f, 100, 130.00f, "Tennis", "Used by Tsitsipas", "Racquets", "Blade V8", "98,16x19,4 3/8", 305.00f);
 		
 		// Add tennis shorts to inventory using setters and getters
 		SportsApparel tennisShorts = new SportsApparel();
@@ -14,13 +14,13 @@ public class Main {
 		tennisShorts.setItemID(102);
 		tennisShorts.setBrandName("Hurley");
 		tennisShorts.setStockQuantity(35);
-		tennisShorts.setPrice(40.95);
-		tennisShorts.setPurchaseCost(15.00);
+		tennisShorts.setPrice(40.95f);
+		tennisShorts.setPurchaseCost(15.00f);
 		tennisShorts.setSport("Tennis");
 		tennisShorts.setDescription("Durable and Breathable");
 
-		tennisShorts.setEquipmentCategory("Active Shorts");
-		tennisShorts.setSize(8);
+		tennisShorts.setApparelCategory("Active Shorts");
+		tennisShorts.setSize("XL");
 		tennisShorts.setColor("Black");
 
 		// Create i.m. and add items to list

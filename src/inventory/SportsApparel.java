@@ -7,14 +7,14 @@ public class SportsApparel extends InventoryItem{
     private String size;
     private String color;
 
-    SportsApparel(){
+    public SportsApparel(){
         super();
         apparelCategory = "NAME-CATEGORY";
         size = "SIZE";
         color = "COLOR";
     }
     
-    SportsApparel(String itemID, String brandName, int stockQuantity, float price,
+    public SportsApparel(String itemID, String brandName, int stockQuantity, float price,
     float purchaseCost, String sport, String description, String apparelCategory, String size, String color){
         // super();
         // this.apparelCategory = apparelCategory;

@@ -2,7 +2,6 @@ package inventory;
 
 public class SportsEquipment extends InventoryItem {
     // Private attributes
-    private String sportName;
     private String equipmentCategory;
     private String model;
     private String size;
@@ -11,21 +10,19 @@ public class SportsEquipment extends InventoryItem {
     // Default constructor
     public SportsEquipment() {
         super(); // Call parent's default constructor
-        sportName = "SPORT NAME";
         equipmentCategory = "CATEGORY";
         model = "MODEL";
         size = "SIZE";
-        weightInGrams = 0.00;
+        weightInGrams = 0.00f;
     }
 
     // Parameterized constructor
-    public SportsEquipment(String itemID, String name, float price, int stockQuantity,
-                           String sportName, String equipmentCategory, 
+    public SportsEquipment(int itemID, String brandName, float price, int stockQuantity,
+                           float purchaseCost, String sport, String description, String equipmentCategory,
                            String model, String size, float weightInGrams) {
         // Added full parent constructor call with all required parameters
-        super(itemID, name, price, stockQuantity);
+        super(itemID, brandName, stockQuantity, price, purchaseCost, sport, description);
         
-        this.sportName = sportName;
         this.equipmentCategory = equipmentCategory;
         this.model = model;
         this.size = size;
@@ -33,15 +30,6 @@ public class SportsEquipment extends InventoryItem {
     }
 
     // Getters and Setters
-    public String getSportName() {
-        return sportName;
-    }
-
-    public void setSportName(String name) {
-        // Added input validation
-        this.sportName = (name != null && !name.trim().isEmpty()) ? name : this.sportName;
-    }
-
     public String getEquipmentCategory() {
         return equipmentCategory;
     }
@@ -60,14 +48,15 @@ public class SportsEquipment extends InventoryItem {
         this.model = (model != null && !model.trim().isEmpty()) ? model : this.model;
     }
 
-    public String[] getSize() {
+    public String getSize() {
         // Return a defensive copy to prevent external modification
-        return size != null ? size.clone() : null;
+        // return size != null ? size.clone() : null;
+        return size;
     }
 
     public void setSize(String size) {
         // Deep copy of input array
-        this.size = size != null ? size.clone() : null;
+        this.size = size; // -!= null ? size.clone() : null;
     }
 
     public float getWeightInGrams() {
@@ -84,10 +73,10 @@ public class SportsEquipment extends InventoryItem {
     public String getInfo() {
         // Null handling and formatting
         StringBuilder sizeStr = new StringBuilder();
-        if (size != null && size.length > 0) {
-            for (int i = 0; i < size.length; i++) {
-                sizeStr.append(size[i]);
-                if (i < size.length - 1) {
+        if (this.size != null && this.size.length() > 0) {
+            for (int i = 0; i < this.size.length(); i++) {
+                sizeStr.append(this.size.charAt(i));
+                if (i < this.size.length() - 1) {
                     sizeStr.append(", ");
                 }
             }
@@ -96,25 +85,23 @@ public class SportsEquipment extends InventoryItem {
         }
         
         return String.format("Sports Equipment Details:\n" +
-                             "Item ID: %s\n" +
-                             "Name: %s\n" +
-                             "Sport Name: %s\n" +
-                             "Equipment Category: %s\n" +
-                             "Model: %s\n" +
-                             "Size(s): %s\n" +
-                             "Weight: %.2f grams\n" +
-                             "Price: $%.2f\n" +
-                             "Stock Quantity: %d",
-                             getItemID(),
-                             getName(),
-                             sportName, 
-                             equipmentCategory, 
-                             model, 
-                             sizeStr.toString(), 
-                             weightInGrams,
-                             getPrice(),
-                             getStockQuantity());
-    }
+                         "Item ID: %d\n" +        // %d for integer ID
+                         "Brand Name: %s\n" +     // %s for String brand name
+                         "Equipment Category: %s\n" + // %s for String category
+                         "Model: %s\n" +          // %s for String model
+                         "Size: %s\n" +           // %s for String size
+                         "Weight: %.2f grams\n" + // %.2f for float weight
+                         "Price: $%.2f\n" +       // %.2f for float price
+                         "Stock Quantity: %d",    // %d for integer quantity
+                         super.getItemID(),
+                         super.getBrandName(),
+                         equipmentCategory,
+                         model,
+                         sizeStr,
+                         weightInGrams,
+                         super.getPrice(),
+                         super.getStockQuantity());
+}
 
     // Added toString() method for printing
     @Override
