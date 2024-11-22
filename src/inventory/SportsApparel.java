@@ -43,7 +43,6 @@ public class SportsApparel extends InventoryItem{
         this.color = color;
     };
 
-    // PLEASE FIX THESE, had to add these in just to compile.
     @Override
     public String getInfo() {
         return String.format("\nSports Apparel Details:\n\n" +
@@ -65,6 +64,18 @@ public class SportsApparel extends InventoryItem{
                          super.getStockQuantity());
     }
 
+    @Override
+    public String toString()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Apperal Category: ").append(apparelCategory).append("\nSize: ").append(size).append("\nColor: ");
+        sb.append(color);
+        sb.append("\nID: ").append(super.getItemID()).append("\nBrand: ").append(super.getStockQuantity()).append("\nPrice: ").append(super.getPrice());
+        sb.append("\nPurchase Cost: ").append(super.getPurchaseCost()).append("\nSport: ").append(super.getSport()).append("\nDescription:");
+        sb.append(super.getDescription());
+
+        return sb.toString();
+    }
     // @Override
     // public float calculateRestockCost(int quantity) {
     //     // Just to test
