@@ -12,7 +12,7 @@ public class SportsEquipment extends InventoryItem {
     public SportsEquipment() {
         super(); // Call parent's default constructor
         sportName = "SPORT NAME";
-        equipmentCateogry = "CATEGORY";
+        equipmentCategory = "CATEGORY";
         model = "MODEL";
         size = "SIZE";
         weightInGrams = 0.00;
