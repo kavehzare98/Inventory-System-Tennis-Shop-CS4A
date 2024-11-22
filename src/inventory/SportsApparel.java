@@ -45,7 +45,7 @@ public class SportsApparel extends InventoryItem{
 
     // PLEASE FIX THESE, had to add these in just to compile.
     @Override
-    public void getInfo() {
+    public String getInfo() {
         System.out.println("getInfo() function for SportsApparel");
     }
 
@@ -53,7 +53,7 @@ public class SportsApparel extends InventoryItem{
     public float calculateRestockCost(int quantity) {
         // Just to test
         System.out.println("calculateRestockCost() function called by SportsApparel");
-        return 0.00;    // change this line
+        return 0.00f;    // change this line
     }
 
 
