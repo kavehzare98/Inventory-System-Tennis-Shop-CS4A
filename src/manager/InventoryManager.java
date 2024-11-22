@@ -42,7 +42,7 @@ public class InventoryManager {
 	public void addItem(InventoryItem item) {
 		items.add(item);
 		System.out.println("The following item has been added to the inventory system!");
-		item.getInfo();
+		System.out.println(item.getInfo());
 	}
 
 	// removeItem(int itemID) - This method removes a current inventory item from the system
@@ -76,7 +76,7 @@ public class InventoryManager {
 		
 		if (found != -1) {
 			InventoryItem item = items.get(found);
-			item.getInfo();
+			System.out.println(item.getInfo());
 		}
 		else {
 			System.out.println("The item was not found in the inventory system!");
@@ -150,7 +150,9 @@ public class InventoryManager {
 	public void displayAllItems() {
 		System.out.println("Displaying All Items in current Inventory System:");
 		for (int i = 0; i < items.size(); i++)
-			items.get(i).getInfo();
+		{
+			System.out.println(items.get(i).getInfo());
+		}
 	}
 
 	// calculateRevenue(itemID, quantity)

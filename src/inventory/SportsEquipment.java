@@ -72,33 +72,35 @@ public class SportsEquipment extends InventoryItem {
     @Override
     public String getInfo() {
         // Null handling and formatting
-        StringBuilder sizeStr = new StringBuilder();
-        if (this.size != null && this.size.length() > 0) {
-            for (int i = 0; i < this.size.length(); i++) {
-                sizeStr.append(this.size.charAt(i));
-                if (i < this.size.length() - 1) {
-                    sizeStr.append(", ");
-                }
-            }
-        } else {
-            sizeStr.append("No sizes specified");
-        }
+        // StringBuilder sizeStr = new StringBuilder();
+        // if (this.size != null && this.size.length() > 0) {
+        //     for (int i = 0; i < this.size.length(); i++) {
+        //         sizeStr.append(this.size.charAt(i));
+        //         if (i < this.size.length() - 1) {
+        //             sizeStr.append(", ");
+        //         }
+        //     }
+        // } else {
+        //     sizeStr.append("No sizes specified");
+        // }
         
-        return String.format("Sports Equipment Details:\n" +
+        return String.format("\nSports Equipment Details:\n\n" +
                          "Item ID: %d\n" +        // %d for integer ID
                          "Brand Name: %s\n" +     // %s for String brand name
                          "Equipment Category: %s\n" + // %s for String category
                          "Model: %s\n" +          // %s for String model
                          "Size: %s\n" +           // %s for String size
                          "Weight: %.2f grams\n" + // %.2f for float weight
+                         "Description: %s\n" +    // %s for String description
                          "Price: $%.2f\n" +       // %.2f for float price
                          "Stock Quantity: %d",    // %d for integer quantity
                          super.getItemID(),
                          super.getBrandName(),
                          equipmentCategory,
                          model,
-                         sizeStr,
+                         size,
                          weightInGrams,
+                         super.getDescription(),
                          super.getPrice(),
                          super.getStockQuantity());
 }

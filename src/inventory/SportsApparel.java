@@ -46,7 +46,23 @@ public class SportsApparel extends InventoryItem{
     // PLEASE FIX THESE, had to add these in just to compile.
     @Override
     public String getInfo() {
-        return "getInfo() function for SportsApparel";
+        return String.format("\nSports Apparel Details:\n\n" +
+                         "Item ID: %d\n" +        // %d for integer ID
+                         "Brand Name: %s\n" +     // %s for String brand name
+                         "Apparel Category: %s\n" + // %s for String category
+                         "Size: %s\n" +           // %s for String size
+                         "Color: %s \n" +         // %s for String color
+                         "Description: %s \n" +   // %s for String description
+                         "Price: $%.2f\n" +       // %.2f for float price
+                         "Stock Quantity: %d",    // %d for integer quantity
+                         super.getItemID(),
+                         super.getBrandName(),
+                         apparelCategory,
+                         size,
+                         color,
+                         super.getDescription(),
+                         super.getPrice(),
+                         super.getStockQuantity());
     }
 
     // @Override
