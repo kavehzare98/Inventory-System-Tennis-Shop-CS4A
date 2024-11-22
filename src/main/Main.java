@@ -9,7 +9,7 @@ public class Main {
 		SportsEquipment tennisRacquet = new SportsEquipment(101, "Wilson", 100, 249.00, 130.00, "Tennis", "Used by Tsitsipas", "Racquets", "Blade V8", "98,16x19,4 3/8", 305);
 		
 		// Add tennis shorts to inventory using setters and getters
-		SportsApparel tennisShorts = new SportsApparel(101, "Wilson", 100, 249.00, 130.00, "Tennis", "Used by Tsitsipas", "Racquets", "Blade V8", "98,16x19,4 3/8", 305);
+		SportsApparel tennisShorts = new SportsApparel();
 		
 		tennisShorts.setItemID(102);
 		tennisShorts.setBrandName("Hurley");
