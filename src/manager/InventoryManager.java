@@ -153,6 +153,8 @@ public class InventoryManager {
 		{
 			System.out.println(items.get(i).getInfo());
 		}
+		
+		System.out.println("END ITEMS");
 	}
 
 	// calculateRevenue(itemID, quantity)
