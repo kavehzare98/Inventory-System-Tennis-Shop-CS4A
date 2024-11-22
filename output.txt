@@ -1,0 +1,96 @@
+The following item has been added to the inventory system!
+
+Sports Equipment Details:
+
+Item ID: 101
+Brand Name: Wilson
+Equipment Category: Racquets
+Model: Blade V8
+Size: 98,16x19,4 3/8
+Weight: 305.00 grams
+Description: Used by Tsitsipas
+Price: $249.00
+Stock Quantity: 100
+The following item has been added to the inventory system!
+
+Sports Apparel Details:
+
+Item ID: 102
+Brand Name: Hurley
+Apparel Category: Active Shorts
+Size: XL
+Color: Black 
+Description: Durable and Breathable 
+Price: $40.95
+Stock Quantity: 35
+All inventory items: 
+Displaying All Items in current Inventory System:
+
+Sports Equipment Details:
+
+Item ID: 101
+Brand Name: Wilson
+Equipment Category: Racquets
+Model: Blade V8
+Size: 98,16x19,4 3/8
+Weight: 305.00 grams
+Description: Used by Tsitsipas
+Price: $249.00
+Stock Quantity: 100
+
+Sports Apparel Details:
+
+Item ID: 102
+Brand Name: Hurley
+Apparel Category: Active Shorts
+Size: XL
+Color: Black 
+Description: Durable and Breathable 
+Price: $40.95
+Stock Quantity: 35
+
+All IDs in inventory:
+
+  itemID  |  brandName  |  price  
+101 | Wilson | 249.0
+102 | Hurley | 40.95
+
+
+Checking stock for Item ID 101:
+Stock for Item ID 101: 100
+
+Restocking Item ID 101 by 50 units.
+Stock after restocking: 150
+
+Selling 10 units of Item ID 102:
+Old Quantity of Item ID 102: 35
+Sufficient stock. Selling desired quantity: 10
+SOLD!
+New Quantity of Item ID 102: 25
+
+Calculating revenue for 15 units of Item ID 101:
+Revenue for 15 units: $3735.0
+
+Calculating cost for 5 units of Item ID 102:
+Cost for 5 units: $75.0
+
+Calculating gross profit for 10 units of Item ID 101:
+Gross profit for 10 units: $1190.0
+
+Removing Item ID 101 from inventory:
+The following item has been removed from the inventory system!
+Removed Item ID: 101
+
+Displaying all items after removal:
+Displaying All Items in current Inventory System:
+
+Sports Apparel Details:
+
+Item ID: 102
+Brand Name: Hurley
+Apparel Category: Active Shorts
+Size: XL
+Color: Black 
+Description: Durable and Breathable 
+Price: $40.95
+Stock Quantity: 25
