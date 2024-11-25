@@ -11,7 +11,7 @@ public class Main {
 	try
 	{
 		PrintStream out = new PrintStream("../output.txt");
-        System.setOut(out);
+	System.setOut(out);
 		// Add a tennis racquet to invnetory using overloaded constructor
 		SportsEquipment tennisRacquet = new SportsEquipment(101, "Wilson", 249.00f, 100, 130.00f, "Tennis", "Used by Tsitsipas", "Racquets", "Blade V8", "98,16x19,4 3/8", 305.00f);
 		
@@ -79,10 +79,9 @@ public class Main {
 		System.out.println("\nDisplaying all items after removal:");
 		inventoryManager.displayAllItems();
 		
-	}
-	catch(FileNotFoundException e) {
+	} catch(FileNotFoundException e) {
 		e.printStackTrace();
-	}
+		}
 	}
 
 	}

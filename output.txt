@@ -48,6 +48,7 @@ Color: Black
 Description: Durable and Breathable 
 Price: $40.95
 Stock Quantity: 35
+END ITEMS
 
 All IDs in inventory:
 
@@ -94,3 +95,4 @@ Color: Black
 Description: Durable and Breathable 
 Price: $40.95
 Stock Quantity: 25
+END ITEMS
